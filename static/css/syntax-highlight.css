@@ -45,11 +45,18 @@
   padding: 0;
   margin: 0;
   border: 0;
+  width: 100%;
+}
+
+/* For getting a full line highlighted. */
+.chroma .lntable tbody tr {
+  display: grid;
+  grid-template-columns: 0fr 1fr;
 }
 
 /* LineHighlight */
 .chroma .hl {
-  color: #51576d;
+  background-color: #51576d;
 }
 
 /* LineNumbersTable */
@@ -57,7 +64,6 @@
   white-space: pre;
   -webkit-user-select: none;
   user-select: none;
-  margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
   color: #838ba7;
 }
