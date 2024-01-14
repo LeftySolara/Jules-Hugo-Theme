@@ -4,5 +4,11 @@
   {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title
   site.Title }}{{ end }}
 </title>
+
 {{ partialCached "head/css.html" . }} {{ partialCached "head/js.html" . }}
+
 <link rel="stylesheet" href="/css/syntax-highlight.css" />
+
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS |
+resources.Minify}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
