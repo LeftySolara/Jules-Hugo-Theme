@@ -1,4 +1,5 @@
 [highlight]
   lineNos = true
+  anchorlinenos = true
   tabwidth = 4
   noClasses = false
