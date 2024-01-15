@@ -1,3 +1,5 @@
 {{ with .Params.hide_footer }}
 <!-- No footer here! -->
-{{ else }} © {{ .Site.Params.contact.name }} {{ now.Year }} {{ end }}
+{{ else }}
+<p>© {{ .Site.Params.contact.name }} {{ now.Year }}</p>
+{{ end }}
