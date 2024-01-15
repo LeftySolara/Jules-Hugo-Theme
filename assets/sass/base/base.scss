@@ -1,0 +1,11 @@
+@use "../abstracts/mixins" as mixins;
+@use "../themes/catppuccin" as themes;
+
+@include themify(themes.$palette) {
+  background-color: themed("base");
+  color: themed("text");
+
+  a {
+    color: themed("blue");
+  }
+}
