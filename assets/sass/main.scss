@@ -2,7 +2,9 @@
 
 @import "abstracts/mixins";
 
-@import "base/base.scss";
+@import "base/base";
+@import "base/fonts";
+@import "base/typography";
 
 @import "layout/header";
 @import "layout/footer";
