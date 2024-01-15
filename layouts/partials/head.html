@@ -9,6 +9,19 @@
 
 <link rel="stylesheet" href="/css/syntax-highlight.css" />
 
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS |
-resources.Minify}}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
+<!--
+Transpile our sass files to CSS.
+If running in production, minify and hash the CSS before linking it.
+-->
+{{ with resources.Get "sass/main.scss" }}
+  {{ $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" }}
+  {{ with . | toCSS $opts }}
+    {{ if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else }}
+      {{ with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
