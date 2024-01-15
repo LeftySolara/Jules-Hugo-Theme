@@ -2,4 +2,5 @@
 <!-- No footer here! -->
 {{ else }}
 <p>© {{ .Site.Params.contact.name }} {{ now.Year }}</p>
-{{ end }}
+<button id="theme-toggle" type="button">Toggle Theme</button>
+{{ partialCached "footer/scripts.html" . }} {{ end }}

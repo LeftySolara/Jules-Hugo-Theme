@@ -1,6 +1,8 @@
 @import "vendors/include-media";
 
-@import "base/catppuccin";
+@import "abstracts/mixins";
 
 @import "layout/header";
 @import "layout/footer";
+
+@import "themes/catppuccin";
