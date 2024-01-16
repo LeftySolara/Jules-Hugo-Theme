@@ -1,5 +1,14 @@
+@use "../abstracts/mixins" as mixins;
+@use "../themes/catppuccin" as themes;
+
+@include themify(themes.$palette) {
+  #header {
+    border-bottom: 2px solid themed("surface2");
+  }
+}
+
 #header {
-  border: 0px solid black;
+  padding-bottom: 16px;
 }
 
 .nav-container {
