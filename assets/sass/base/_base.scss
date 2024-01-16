@@ -11,9 +11,19 @@
   }
 }
 
+html {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+body {
+  width: 768px;
+}
+
 p,
 li {
-  font-family: typography.$body-font-stack;
+  font-family: typography.$interface-font-stack;
 }
 
 h1,
