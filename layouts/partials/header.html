@@ -1,2 +1,11 @@
 <h1>{{ site.Title }}</h1>
-{{ partial "nav.html" . }}
+<div class="nav-container">
+  {{ partial "nav.html" . }}
+  <iconify-icon
+    icon="ph:sun"
+    style="color: #df8e1d"
+    width="32"
+    height="32"
+    id="theme-toggle"
+  ></iconify-icon>
+</div>
