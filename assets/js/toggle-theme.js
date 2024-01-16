@@ -1,13 +1,9 @@
-let currentTheme = "light";
+import { setThemeMode } from "./main";
 
 function toggleThemeMode() {
-  if (currentTheme == "light") {
-    currentTheme = "dark";
-  } else {
-    currentTheme = "light";
-  }
-
-  document.body.className = `${currentTheme}-theme`;
+  const currentTheme = localStorage.getItem("current-theme") || "light";
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+  setThemeMode(newTheme);
 }
 
 const toggleButton = document.getElementById("theme-toggle");
