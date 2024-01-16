@@ -1,0 +1,18 @@
+@use "../abstracts/mixins" as mixins;
+@use "../themes/catppuccin" as themes;
+
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@include themify(themes.$palette) {
+  .nav-list-item a {
+    color: themed("text");
+    text-decoration-color: themed("rosewater");
+  }
+}
