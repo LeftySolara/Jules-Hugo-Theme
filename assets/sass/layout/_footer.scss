@@ -1,3 +1,29 @@
+@use "../abstracts/mixins" as mixins;
+@use "../themes/catppuccin" as themes;
+
 #footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   border: 0px solid black;
+}
+
+.social-icons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+@include themify(themes.$palette) {
+  .github {
+    color: themed("text");
+  }
+
+  .linkedin,
+  .twitter {
+    color: themed("sky");
+  }
 }
