@@ -3,7 +3,7 @@
 {{ else }}
 <p>© {{ .Site.Params.contact.name }} {{ now.Year }}</p>
 <div class="social-icons">
-  <a href="https://github.com/leftysolara">
+  <a href="{{ .Site.Params.githubLink }}">
     <iconify-icon
       class="github"
       icon="mdi:github"
@@ -11,7 +11,7 @@
       height="32"
     ></iconify-icon
   ></a>
-  <a href="https://linkedin.com/in/julianneadams">
+  <a href="{{ .Site.Params.linkedinLink }}">
     <iconify-icon
       class="linkedin"
       icon="mdi:linkedin"
@@ -19,7 +19,7 @@
       height="32"
     ></iconify-icon
   ></a>
-  <a href="https://twitter.com/leftysolara">
+  <a href="{{ .Site.Params.twitterLink }}">
     <iconify-icon
       class="twitter"
       icon="mdi:twitter"
