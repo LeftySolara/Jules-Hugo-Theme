@@ -1,1 +1,16 @@
-{{ define "main" }} {{ .Content }} {{ end }}
+{{ define "main" }}
+<div id="home-page">{{ .Content }}</div>
+<div>
+  <h2>Recent Posts</h2>
+  {{ with .Site.GetPage "/posts"}}
+  <ul class="recent-posts-list">
+    {{ range .Pages.Limit 5 }}
+    <li>
+      {{ .Date.Format "January 2, 2006" }} -
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}

@@ -24,6 +24,8 @@ body {
 p,
 li {
   font-family: typography.$interface-font-stack;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 h1,
@@ -33,6 +35,7 @@ h4,
 h5,
 h6 {
   font-family: typography.$heading-font-stack;
+  font-weight: 300;
 }
 
 a {
