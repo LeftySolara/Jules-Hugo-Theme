@@ -5,6 +5,14 @@
   #header {
     border-bottom: 2px solid themed("surface2");
   }
+
+  .theme-toggle-light {
+    color: themed("rosewater");
+  }
+
+  .theme-toggle-dark {
+    color: themed("sapphire");
+  }
 }
 
 #header {
