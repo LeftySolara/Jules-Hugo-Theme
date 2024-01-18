@@ -4,6 +4,13 @@
 @include themify(themes.$palette) {
   #header {
     border-bottom: 2px solid themed("surface2");
+
+    @include media(">phone", "<=desktop") {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .theme-toggle-light {
@@ -19,9 +26,20 @@
   padding-bottom: 16px;
 }
 
+#header h1 {
+  @include media(">phone", "<=desktop") {
+    font-size: 28px;
+  }
+}
+
 .nav-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+
+  @include media(">phone", "<=desktop") {
+    flex-flow: column nowrap;
+    gap: 16px;
+  }
 }

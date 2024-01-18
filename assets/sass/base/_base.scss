@@ -15,10 +15,16 @@ html {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  width: 100vw;
 }
 
 body {
   width: 768px;
+  position: fixed;
+
+  @include media(">phone", "<=desktop") {
+    width: 90%;
+  }
 }
 
 p,
