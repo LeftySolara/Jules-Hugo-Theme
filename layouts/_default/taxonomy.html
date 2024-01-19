@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<h1 class="taxonomy-title">All {{ .Data.Plural }}</h1>
+
+{{ $taxonomyObject := .Data.Terms }}
+<ul class="taxonomy-list">
+  {{ range $taxonomyObject.Alphabetical}}
+  <li>
+    <div class="series-container">
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+      <p>{{ .Page.Params.Description }}</p>
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

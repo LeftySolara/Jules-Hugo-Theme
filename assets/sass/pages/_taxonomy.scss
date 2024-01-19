@@ -1,0 +1,23 @@
+.taxonomy-title {
+  text-transform: capitalize;
+}
+
+.taxonomy-list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.series-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+
+.series-container p {
+  margin: 0;
+  padding: 0;
+}
