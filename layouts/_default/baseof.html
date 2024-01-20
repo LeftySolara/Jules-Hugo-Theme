@@ -8,7 +8,7 @@
   </head>
   <body class="{{ .Site.Params.themeDefault }}-theme">
     <header id="header">{{ partial "header.html" . }}</header>
-    <main>{{ block "main" . }}{{ end }}</main>
+    <main id="main-content">{{ block "main" . }}{{ end }}</main>
     <footer id="footer">{{ partial "footer/footer.html" . }}</footer>
   </body>
 </html>

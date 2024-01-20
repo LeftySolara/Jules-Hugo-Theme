@@ -4,13 +4,6 @@
 @include themify(themes.$palette) {
   #header {
     border-bottom: 2px solid themed("surface2");
-
-    @include media(">phone", "<=desktop") {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-    }
   }
 
   .theme-toggle-light {
@@ -23,7 +16,15 @@
 }
 
 #header {
+  width: 100%;
   padding-bottom: 16px;
+
+  @include media(">phone", "<=desktop") {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 #header h1 {
