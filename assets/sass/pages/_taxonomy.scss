@@ -11,13 +11,13 @@
   list-style: none;
 }
 
-.series-container {
+.taxonomy-list-item {
   display: flex;
   flex-flow: column nowrap;
   gap: 8px;
 }
 
-.series-container p {
+.taxonomy-list-item p {
   margin: 0;
   padding: 0;
 }

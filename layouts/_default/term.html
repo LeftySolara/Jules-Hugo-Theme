@@ -1,0 +1,14 @@
+{{ define "main"}}
+
+<h1 class="taxonomy-title">{{ .Params.title }}</h1>
+
+<ul class="taxonomy-list">
+  {{ range .Data.Pages.ByPublishDate }}
+  <li class="taxonomy-list-item">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <p>{{ .Summary }}</p>
+  </li>
+  {{ end }}
+</ul>
+
+{{ end }}

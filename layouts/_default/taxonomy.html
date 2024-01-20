@@ -5,11 +5,9 @@
 {{ $taxonomyObject := .Data.Terms }}
 <ul class="taxonomy-list">
   {{ range $taxonomyObject.Alphabetical}}
-  <li>
-    <div class="series-container">
-      <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
-      <p>{{ .Page.Params.Description }}</p>
-    </div>
+  <li class="taxonomy-list-item">
+    <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+    <p>{{ .Page.Params.Description }}</p>
   </li>
   {{ end }}
 </ul>
