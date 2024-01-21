@@ -1,7 +1,7 @@
 +++
 title = 'Post 2'
 date = 2023-02-15T10:00:00-07:00
-draft = false
+draft = true
 tags = ['red','green']
 series = ["Example Posts"]
 summary="Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum."
