@@ -23,7 +23,8 @@
 }
 
 @include themify(themes.$palette) {
-  .github {
+  .github,
+  .email {
     color: themed("text");
   }
 
