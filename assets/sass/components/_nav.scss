@@ -11,6 +11,7 @@
 
   @include media(">phone", "<=desktop") {
     flex-flow: row wrap;
+    justify-content: center;
     gap: 16px;
   }
 }

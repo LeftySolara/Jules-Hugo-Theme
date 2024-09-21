@@ -1,0 +1,52 @@
+@use "../themes/catppuccin" as themes;
+@use "../abstracts/mixins" as mixins;
+@use "../vendors/include-media";
+
+@include themify(themes.$palette) {
+  .project__container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 40px;
+
+    width: 100%;
+
+    @include media("<desktop") {
+      flex-flow: column nowrap;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+
+      margin-top: 32px;
+    }
+  }
+
+  .project__image {
+    width: 50%;
+    height: auto;
+
+    border: 2px solid themed("subtext1");
+    border-radius: 8px;
+
+    @include media("<desktop") {
+      width: 100%;
+    }
+  }
+
+  .project__content {
+    width: 50%;
+
+    @include media("<desktop") {
+      width: 100%;
+    }
+  }
+
+  .project__divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid themed("surface1");
+    margin: 2em 0;
+    padding: 0;
+  }
+}
