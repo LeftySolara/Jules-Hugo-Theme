@@ -23,13 +23,14 @@
 }
 
 @include themify(themes.$palette) {
+
   .github,
   .email {
     color: themed("text");
   }
 
   .linkedin,
-  .twitter {
+  .bluesky {
     color: themed("sky");
   }
 }
